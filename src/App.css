@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+ul,
+li {
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 40px 30px 20px 0;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-status {
+  margin-left: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.menu-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-list {
+  display: flex;
+  position: relative;
+}
+
+.menu-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-search {
+  position: absolute;
+  right: 30px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.search-ip {
+  margin-left: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+.product-item {
+  background-color: #fff;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+.product-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-detail {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.product-title {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.product-price {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-choice {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.product-size {
+  width: 130px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.product-putin {
+  width: 100%;
+  background-color: rgb(50, 50, 50);
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 63rem) {
+  .menu-list {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .menu-search {
+    display: none;
+  }
+
+  .side-menu {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: burlywood;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2;
+  }
+  .side-menu-list button {
+    margin: 5px;
+    border: none;
+    background: none;
+    width: 120px;
+  }
+
+  .side-menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    border: none;
+    background: none;
+  }
+
+  .side-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side-menu-list button:hover {
+    background-color: beige;
+    border-radius: 3px;
   }
 }
