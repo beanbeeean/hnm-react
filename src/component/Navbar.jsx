@@ -20,7 +20,6 @@ const Navbar = ({
     "Sale",
     "지속가능성",
   ];
-  let [width, setWidth] = useState(0);
   const navigate = useNavigate();
   const goToLogin = () => {
     if (authenticate === true) {
@@ -48,16 +47,6 @@ const Navbar = ({
 
   return (
     <div>
-      <div className="side-menu" style={{ width: width }}>
-        <button className="closebtn" onClick={() => setWidth(0)}>
-          &times;
-        </button>
-        <div className="side-menu-list">
-          {menuList.map((menu, index) => (
-            <button key={index}>{menu}</button>
-          ))}
-        </div>
-      </div>
       <div className="login-button" onClick={goToLogin}>
         <FontAwesomeIcon icon={faUser} />
         <div className="login-status">{userStatus}</div>
